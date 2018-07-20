@@ -1,0 +1,686 @@
+// Font: Monteserrat (https://fonts.google.com/specimen/Montserrat)
+// Background Color: f9fcff
+// Sidebar Color: fafcff
+// Blue/Green Gradients: 0db2c0  to 65d8b2
+// Orange Gradients: f9736f to f9ae60
+// Campaign Info Text Colors: 0db2c0
+// Dark Blue Text Color: 515974
+$primaryColor : #000;
+$backgroundColor : #000;
+// prefix for each browsers
+$gradationGreen-moz: -moz-linear-gradient(left, #0db2c0, #65d8b2);
+$gradationGreen-webkit: -webkit-linear-gradient(left, #0db2c0, #65d8b2);
+$gradationGreen-linear: linear-gradient(to right, #0db2c0, #65d8b2);
+$gradationOrange-moz: -moz-linear-gradient(left, #f9736f, #f9ae60);
+$gradationOrange-webkit: -webkit-linear-gradient(left, #f9736f, #f9ae60);
+$gradationOrange-linear: linear-gradient(to right, #f9736f, #f9ae60);
+
+body{
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: "メイリオ","ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+  font-family: "游ゴシック体","Yu Gothic",YuGothic,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+  font-family: "Montserrat";
+  line-height: 24px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background: $backgroundBlue;
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+// each heading setting
+.heading1{
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-bottom: 0.4em;
+}
+.heading2{
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-bottom: 0.4em;
+}
+.heading3{
+  font-size: 1.4em;
+  font-weight: bold;
+  padding-bottom: 0.4em;
+}
+
+/***********************
+css for each effect
+************************/
+.box-shadow-effect{
+  box-shadow: -10px 0 12px -13px inset;
+}
+.use-vertical-align{
+  vertical-align: middle;
+  height: 400px;
+  display: table-cell;
+}
+
+// modal
+.paymentContainer {
+    width: 100%;
+    height: 100%;
+    background: rgba(58, 58, 58, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+}
+.paymentPopup {
+    border-radius: 20px;
+    width: 50%;
+    height: 400px;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 6em;
+    padding: 0;
+    position: relative;
+}
+
+
+/***********************
+css for ongoingCampaign
+************************/
+.pendingStamp{
+  position: absolute;
+  bottom: 6em;
+  width: 80%;
+}
+
+.dashboard-element{
+  margin: 0;
+  padding: 0;
+}
+
+.campaign-element{
+  padding: 0.4em 1em;
+  overflow: hidden;
+}
+
+.campaignBg{
+  float: left;
+  width: 50%;
+  height: auto;
+  min-height: 240px;
+  border-radius: 20px 0 0 20px;
+  background-size: cover;
+}
+
+.campaignDetail{
+  position: relative;
+  padding: 1em;
+  float: right;
+  width: 50%;
+  min-height: 240px;
+  height: auto;
+  border-radius: 0 20px 20px 0;
+  border: 2px solid #eee;
+  background: #fff;
+  &__text{
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9em;
+  }
+}
+
+.campaignData{
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  margin: 0.2em 0;
+  &__item{
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    margin-bottom: 1em;
+    i{
+      position: absolute;
+      top: 0;
+      left: -4px;
+      line-height: 48px;
+      vertical-align: middle;
+      img{
+        width: 80%;
+        height: auto;
+      }
+    }
+  }
+  &__num{
+    color: $primaryColor;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0;
+  }
+  &__text{
+    font-size: 0.7em;
+    margin: 0;
+  }
+}
+
+.campaignBlock{
+  padding: 1em 2em;
+}
+
+.rank-dropDown{
+  background: #fff;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  padding: 0.2em 1em;
+  color: #333;
+}
+
+/***********************
+css for monitor
+************************/
+.pageBack{
+  padding: 1.4em 0;
+}
+
+.pageBack__button{
+  cursor: pointer;
+}
+
+.monitor__title{
+  margin: 0;
+  padding: 1em 2em;
+  font-weight: bold;
+}
+
+.analyticsBlock{
+  padding: 0;
+  background: #F0F5FC;
+  border-radius: 20px;
+  padding-bottom: 1em;
+  margin-bottom: 3em;
+  .analytics__range{
+
+  }
+  .analytics__table{
+    margin: 0;
+    tr:nth-child(1){
+      color: #fff;
+      background: $primaryGrey;
+    }
+    tr:last-child{
+      border-radius: 20px;
+    }
+  }
+}
+
+.monitorBlock{
+  margin-bottom: 3em;
+  .defaultBaloon{
+    min-height: 114px;
+  }
+  .monitorItem{
+    text-align: center;
+    .monitorTitle{
+      font-size: 0.9em;
+    }
+    .defaultBaloon{
+      min-height: initial;
+    }
+  }
+}
+
+.graphBlock{
+  margin-bottom: 3em;
+}
+
+.nav-tabs{
+  border: none;
+}
+
+.nav_btn{
+  a{
+    border: 0;
+    background: #eee;
+    border-radius: 20px 20px 0 0 !important;
+    i{
+      color: #333;
+    }
+  }
+}
+
+.tab .nav-tabs li.active a, .tab .nav-tabs li.active a:hover, .tab .nav-tabs li.active a:focus{
+  background: $backgroundGrey;
+  border: 0;
+}
+
+.view_btn{
+  background: $gradationGreen-moz;
+  background: $gradationGreen-linear;
+  background: $gradationGreen-webkit;
+  padding: 0.4em 1.4em;
+  font-size: 0.7em;
+}
+
+.userDistribution{
+  display: none;
+}
+
+.graphItem{
+  padding: 0 2em;
+}
+
+/***********************
+css for createCampaign
+************************/
+
+//-----common parts
+.campaignOrder{
+  padding: 0.4em 1em;
+  &__title{
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .campaignOrderList{
+    padding: 0;
+    padding: 1em 0;
+    &__item{
+      display: inline-block;
+      margin-right: 2em;
+      opacity: 0.4;
+      .orderIcon{
+        font-family: "メイリオ","ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+        font-family: "游ゴシック体","Yu Gothic",YuGothic,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+        border-radius:50%;
+        background: #333;
+        color: #fff;
+        padding: 0em;
+        margin: 0;
+        width: 30px !important;
+        height: 30px !important;
+        margin-right: 0.6em;
+        display: inline-block;
+        line-height: 30px !important;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+    &__item.current{
+      opacity: 1;
+      .orderIcon{
+        background-color: #333;
+        background: $gradationGreen-moz;
+        background: $gradationGreen-linear;
+        background: $gradationGreen-webkit;
+      }
+    }
+  }
+}
+
+.defaultInner{
+  padding: 1.4em 2em 6em;
+  background: $backgroundBlue;
+}
+.defaultBaloon{
+  padding: 1em 1.2em;
+  background: $backgroundGrey;
+  border-radius: 20px;
+}
+.sub-title{
+  font-size: 1.2em;
+  padding-bottom: 0.8em;
+}
+.campaignItem{
+  margin-bottom: 2.5em;
+}
+.buttonBlock{
+  padding: 1em 0;
+  .geo_btn{
+    background: $gradationGreen-moz;
+    background: $gradationGreen-linear;
+    background: $gradationGreen-webkit;
+    margin: 0;
+    padding: 0.4em 3em;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  &__back{
+    float: left;
+    .geo_btn{
+      background: $gradationOrange-moz;
+      background: $gradationOrange-linear;
+      background: $gradationOrange-webkit;
+    }
+  }
+  &__next{
+    float: right;
+  }
+}
+.campaignNameBlock{
+  padding: 1em 0;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1em;
+  .campaignNameBox{
+    .title{
+      padding: 0;
+    }
+  }
+  .compaignNameInput{
+    padding: 1em;
+    border-radius: 10px;
+    font-size: 0.8em;
+    border: 1px solid #eee;
+    margin-right: 1em;
+  }
+  .compaignNameIcon{
+    font-size: 1.4em;
+    color: #666;
+  }
+}
+//-----common parts
+
+
+.campaignCol{
+  padding-right: 2em;
+}
+
+.campaignCreate{
+  margin-bottom: 3em;
+}
+
+.switch_btn{
+  .switch input:checked + .slider:before{
+    background: $gradationGreen-moz;
+    background: $gradationGreen-linear;
+    background: $gradationGreen-webkit;
+  }
+}
+
+.ageBlock{
+  .ageGenerator{
+    &__label{
+      text-align: center;
+      width: 34px;
+      font-weight: bold;
+      border: 1px solid rgb(195,195,195);
+      padding: 5px;
+      border-radius: 6px;
+      display: inline-block;
+      position: relative;
+      background-color: #474F69;
+      color: #fff;
+      font-size: 0.8em;
+      font-weight: normal;
+    }
+  }
+}
+
+.target-slider{
+  .slider{
+    .slider-track{
+      padding: 0.6em 1em;
+      background: $primaryGrey;
+      border-radius: 10px;
+      .slider-selection{
+        background: $gradationGreen-moz;
+        background: $gradationGreen-linear;
+        background: $gradationGreen-webkit;
+      }
+    }
+    .slider-handle{
+      top: 5px;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #fff;
+      background: #474F69;
+    }
+  }
+}
+
+.genderBlock{
+  .gender-btn{
+    color: #fff;
+    background: $primaryGrey;
+    padding: 0.4em 2em;
+  }
+  .gender-btn-selected{
+    background: $gradationGreen-moz;
+    background: $gradationGreen-linear;
+    background: $gradationGreen-webkit;
+  }
+}
+
+.audienceBlock{
+  .tagit{
+    text-align: left;
+    color: #333;
+  }
+  .panel-group{
+    .panel{
+      border-radius: 20px;
+      margin-bottom: 0.6em;
+    }
+    .panel-default>.panel-heading{
+      background: #EEF0F1;
+      border: 1px solid $primaryGrey;
+      border-radius: 20px;
+      padding: 0;
+    }
+    .panel-title{
+      a{
+        padding: 1em 1.4em;
+        display: block;
+      }
+    }
+  }
+}
+
+.calenderBlock{
+  .calender_contain{
+    width: 100%;
+  }
+  .datepicker--cells{
+    height: 17em;
+  }
+  .datepicker--cell.-current-{
+    color: $primaryColor;
+    font-weight: bold;
+  }
+}
+
+.budgetSocial{
+  .fab{
+    font-size: 2em;
+  }
+}
+
+
+// Confirmation
+.confirmItem{
+  .confirmItem__topic{
+    line-height: 2.2em;
+  }
+  .confirmItem__em{
+    font-weight: bold;
+  }
+  .hrStyle{
+    padding-bottom: 0.3em;
+  }
+  .fab{
+    margin: 0 0.4em 0 0;
+    font-size: 1.2em;
+  }
+}
+
+.descriptionText{
+  width: 60%;
+  height: 200px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.dashed{
+  height: 200px;
+  text-align: center;
+  color: #333;
+  .dragdropIcon{
+    width: 20%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .image-text{
+    font-weight: bold;
+    span{
+      font-weight: normal;
+      font-size: 0.8em;
+      display: block;
+    }
+  }
+  .image-btn{
+    width: 30%;
+    margin: 0 auto;
+    background: $gradationGreen-moz;
+    background: $gradationGreen-linear;
+    background: $gradationGreen-webkit;
+  }
+}
+
+.bannerBlock{
+  margin-top: 3em;
+  overflow: hidden;
+  .bannerFb{
+    width: 24%;
+    .banner_preview{
+      width:25vw;
+    }
+  }
+  .bannerLinked{
+    width: 33%;
+    .banner_preview{
+      width:25vw;
+    }
+  }
+  .bannerTwitter{
+    width: 33%;
+    .banner_preview{
+      width:35vw;
+    }
+  }
+  .banner_preview{
+    background: #fff;
+    height:13.3vw;
+    overflow:hidden;
+  }
+}
+
+/***********************
+css for billing
+************************/
+.billingItem{
+  padding: 0;
+  padding-right: 1em;
+  .billingItemCol{
+    padding: 2em;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #eee;
+  }
+  &__num{
+    color: $primaryColor;
+    font-weight: bold;
+    font-size: 1.4em;
+    .billingPrice{
+
+    }
+    .currency{
+      font-size: 0.6em !important;
+    }
+  }
+}
+
+.filter__table{
+  tr:nth-child(odd){
+    background: #fff;
+  }
+  tr:nth-child(1){
+    background: $backgroundGrey;
+  }
+  tr:nth-child(even){
+    background: #fff;
+  }
+}
+
+
+
+.defaultBaloon {
+    font-size: 1.1em;
+    font-weight: 1000;
+    font-family: 'Montserrat', sans-serif;
+    color: #515974;
+    border: 0.1px solid;
+    border-color: rgba(138, 138, 138, 0.15);
+}
+
+.monitor__title {
+
+    font-size: 1.1em;
+    font-weight: 1000;
+    color: #515974;
+    padding: 0.5em 0.5em 0.5em!important;
+    margin-left: 1.2em !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.first-row-data {
+    border-top: 1px solid;
+    border-color: rgba(88, 88, 88, 0.15);
+    padding-top: 2vh;
+    color: #65d8b2;
+    font-size: 1.2em;
+}
+.analyticsBlock .analytics__table tr:nth-child(1){
+    background: #515974bd !important;
+    font-family: 'Montserrat', sans-serif;
+}
+.tr:nth-child{
+    background-color: white !important;
+}
+.budgetBlock .budgetNum{
+    border: 1px solid !important;
+    border-color: rgba(88, 88, 88, 0.15)!important;
+    box-shadow: 0 4px 8px 0 rgba(29, 15, 15, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+.menuTop{
+    border-bottom: 0.5px solid;
+    border-color: rgba(88, 88, 88, 0.15);
+}
+.budgetBlock .deposit__btn{
+    box-shadow: 0 4px 8px 0 rgba(29, 15, 15, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.rank-dropDown{
+    border: 2px solid #51597467!important;
+    box-shadow: 0 4px 8px 0 rgba(29, 15, 15, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+
+// .loader{
+//   display: block !important;
+//   font-size: 5em;
+//   position: absolute;
+//   top: 0;
+//   left: 40%;
+//   z-index: 10;
+// }
+
+@media only screen and (max-width: 640px){
+
+}
