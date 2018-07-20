@@ -8,11 +8,14 @@
 
 /*
   Basic Rules
-  * not px, em or % or vh, vw
-  * color often to be used should be set as $
-  * don't write same code especially in different files
-  *
+  * not px, set em or % or or vh, vw
+  * color should be set as $
+  * don't write same code in several files
+  * set a comment
 */
+
+// webkit- ⇒ Google Chrome, Safari
+// 「-ms- ⇒ IE
 
 $primaryColor : #000;
 $backgroundColor : #000;
@@ -44,7 +47,7 @@ img{
 
 // each heading setting
 .heading1{
-  font-size: 1.4em;
+  font-size: 1.6em;
   font-weight: bold;
   padding-bottom: 0.4em;
 }
@@ -54,7 +57,7 @@ img{
   padding-bottom: 0.4em;
 }
 .heading3{
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: bold;
   padding-bottom: 0.4em;
 }
@@ -65,6 +68,7 @@ css for each effect
 .box-shadow-effect{
   box-shadow: -10px 0 12px -13px inset;
 }
+
 .use-vertical-align{
   vertical-align: middle;
   height: 400px;
@@ -98,6 +102,171 @@ css for each effect
   -webkit-appearance: none;
   appearance: none;
 }
+
+tr:nth-child(odd){
+  background: #fff;
+}
+tr:nth-child(1){
+  background: $backgroundGrey;
+}
+tr:nth-child(even){
+  background: #fff;
+}
+
+// baloon
+.balloon1 {
+ 	position: relative;
+	display: inline-block;
+ 	margin: 1.5em 0;
+	padding: 7px 10px;
+	min-width: 120px;
+ 	max-width: 100%;
+ 	color: #555;
+	font-size: 16px;
+	background: #e0edff;
+}
+.balloon1:before{
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+ 	margin-left: -15px;
+	border: 15px solid transparent;
+	border-top: 15px solid #e0edff;
+}
+.balloon1 p {
+	margin: 0;
+	padding: 0;
+}
+
+// placeholder color
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+}
+
+// background setting
+// background-color	背景色
+// background-image	背景画像
+// background-repeat	背景画像の繰り返し方法
+// background-attachment	背景画像のスクロール方法
+// background-position	背景画像の表示位置
+#d_background1 {
+	background:#ff6699 url(/content/img/pattern.jpg) repeat 0 0;
+	padding:20px;
+	color:#fff;
+	font-weight:bold;
+	text-align:center;
+}
+
+.box-balloon {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  padding: 15px;
+  border: 6px solid #279ee9;
+  border-radius: 6px;
+  margin-bottom: 42px; /* 三角形画像の高さ + 下に取りたい余白の大きさ */
+}
+.box-balloon::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  bottom: -32px;
+  width: 34px;
+  height: 32px;
+  margin-left: -17px; /* 三角形画像の幅の半分 */
+  background: url("/common/images/ico_baloon_tip_01.png") top left no-repeat;
+  background-size: 34px 32px;
+}
+.box-balloon > p {
+  font-weight: bold;
+  line-height: 2.0;
+}
+
+// set border-spacing
+.table-spacing {
+  border: 2px #000000 solid;
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
+// set the center in element
+.element-center {
+  color: #fff;
+  background-color:#f00;
+  padding: 0;
+  margin: 0;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+// how to use before, after
+p:before {
+    content: url(../img/es_logo.png);
+    margin: 10px;
+    position: relative;
+    top: 8px;
+}
+
+p:after {
+    content: url(../img/es_logo.png);
+    margin: 10px;
+    position: relative;
+    top: 8px;
+}
+
+.border-dotted{
+  background-image: linear-gradient(to right, #000, #000 1px, transparent 1px, transparent 4px);
+  background-size: 5px 1px;
+  background-position: top;
+  background-repeat: repeat-x;
+}
+
+// select hide
+.select-hide {
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+}
+.select-hide::-ms-expand {
+  display: none;
+}
+
+// vertical-align
+// table cell, available for inline level element, not available for float,
+.float-parent{
+  position: relative;
+	width: 300px;
+	height: 300px;
+}
+.float-child{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 100px;
+	height: 100px;
+}
+
+// graduation for text
+.graduation-text{
+  color: #ACB6E5;
+  background: -webkit-linear-gradient(0deg, #ACB6E5, #86FDE8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 @media only screen and (max-width: 640px){
 
